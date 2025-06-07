@@ -30,7 +30,7 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Failed to fetch posts');
 
-      const fetchedPosts = data.posts || [];
+      const fetchedPosts = (data.posts || []).filter((post) => post.isPublic);
 
       setHasMore(pageNum < data.totalPages);
       setPage(pageNum);

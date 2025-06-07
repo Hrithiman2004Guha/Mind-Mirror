@@ -1,7 +1,6 @@
 import express from "express";
 import Comment from "../models/Comment.js";
 import protectRoute from "../middleware/auth.middleware.js";
-import Post from "../models/Post.js"; // ✅ Add this line
 const router = express.Router();
 router.get("/user/all", protectRoute, async (req, res) => {
   try {

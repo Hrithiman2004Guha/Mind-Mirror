@@ -65,7 +65,7 @@ router.post("/login", async(req,res)=>{
                 username: existingUser.username,
                 email: existingUser.email,
                 profileImage: existingUser.profileImage,
-                createdAt: newUser.createdAt
+                createdAt: existingUser.createdAt
             },
         });
     } catch (error) {

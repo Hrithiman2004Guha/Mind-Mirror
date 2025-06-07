@@ -47,7 +47,7 @@ export default function Login() {
               <Image
                 source={require('../../assets/images/i.png')}
                 style={{ width: 160, height: 160 }}
-                resizeMode="contain"
+                contentFit="contain"
               />
             </View>
 

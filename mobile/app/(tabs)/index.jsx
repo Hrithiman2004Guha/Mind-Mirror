@@ -3,6 +3,7 @@ import React from 'react'
 import { useAuthStore } from '../../stores/authStore'
 import { useRouter } from 'expo-router';
 import { TouchableOpacity } from 'react-native';
+import { useEffect } from 'react';
 export default function Home() {
     const router = useRouter();
     const {logout} = useAuthStore();

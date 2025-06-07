@@ -12,6 +12,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.background,
   },
+  suggestionItem: {
+  fontSize: 15,
+  color: COLORS.textPrimary,
+  marginVertical: 2,
+},
   card: {
     backgroundColor: COLORS.cardBackground,
     borderRadius: 16,

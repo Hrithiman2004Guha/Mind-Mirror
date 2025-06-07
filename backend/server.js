@@ -5,6 +5,7 @@ import authRoutes from './routes/authRoute.js';
 import cors from 'cors'
 import postRoutes from './routes/postRoute.js';
 import commentRoutes from './routes/commentRoute.js';
+import replyRoutes from './routes/replyRoute.js';
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors());
@@ -20,6 +21,7 @@ mongoose.connect(process.env.MONGO_URI, {
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
+app.use("/api/reply", replyRoutes)
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

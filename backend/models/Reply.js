@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const commentSchema = mongoose.Schema({
+const replySchema = mongoose.Schema({
     user:{
         type: String,
         ref:"User",
@@ -10,11 +10,11 @@ const commentSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    post:{
+    comment:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Post",
+        ref: "Comments",
         required: true,
     }
 }, {timestamps:true})
-const Comment = mongoose.model("Comment", commentSchema);
-export default Comment;
+const Reply = mongoose.model("Replies", replySchema);
+export default Reply;

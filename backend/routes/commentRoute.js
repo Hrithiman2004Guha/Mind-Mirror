@@ -1,10 +1,18 @@
 import express from "express";
 import Comment from "../models/Comment.js";
 import protectRoute from "../middleware/auth.middleware.js";
-
+import Post from "../models/Post.js"; // ✅ Add this line
 const router = express.Router();
-
-// 📝 Create a new comment
+router.get("/user/all", protectRoute, async (req, res) => {
+  try {
+    const userComments = await Comment.find({ user: req.user._id })
+      .sort({ createdAt: -1 })
+    res.status(200).json(userComments);
+  } catch (error) {
+    console.error("Error fetching user's comments:", error.message);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
 router.post("/:postId", protectRoute, async (req, res) => {
   try {
     const { content } = req.body;
@@ -15,7 +23,7 @@ router.post("/:postId", protectRoute, async (req, res) => {
     }
 
     const newComment = new Comment({
-      author: req.user._id,
+      user: req.user._id,
       content,
       post: postId,
     });
@@ -36,7 +44,7 @@ router.get("/:postId", async (req, res) => {
 
     const comments = await Comment.find({ post: postId })
       .sort({ createdAt: -1 })
-      .populate("author", "username profileImage");
+      .populate("user", "username profileImage");
 
     res.json(comments);
   } catch (error) {
@@ -51,8 +59,8 @@ router.delete("/:id", protectRoute, async (req, res) => {
     const comment = await Comment.findById(req.params.id);
     if (!comment) return res.status(404).json({ message: "Comment not found" });
 
-    if (comment.author.toString() !== req.user._id.toString()) {
-      return res.status(403).json({ message: "Unauthorized to delete this comment" });
+    if (comment.user.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ message: "Unuserized to delete this comment" });
     }
 
     await comment.deleteOne();

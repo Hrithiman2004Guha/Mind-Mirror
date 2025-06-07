@@ -9,7 +9,7 @@ const postSchema = new  mongoose.Schema({
         required: true
     },
     user:{
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         required: true,
     },
     isPublic:{
@@ -22,6 +22,10 @@ const postSchema = new  mongoose.Schema({
     books: [String],
     shows: [String],
   },
+    comments:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comments"
+    }]
 },{timestamps:true})
 const Post = mongoose.model("Posts", postSchema);
 export default Post;

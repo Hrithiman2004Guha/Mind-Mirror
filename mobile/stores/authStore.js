@@ -1,5 +1,7 @@
 import {create} from "zustand";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useRouter } from "expo-router";
+const router = useRouter();
 export const useAuthStore = create((set)=>({
     user: null,
     token: null,
@@ -31,6 +33,7 @@ export const useAuthStore = create((set)=>({
     logout: async()=>{
         await AsyncStorage.removeItem("user")
         await AsyncStorage.removeItem("token")
+        router.replace("(auth)")
         set({user: null, token: null})
     },
     login: async(email, password)=>{

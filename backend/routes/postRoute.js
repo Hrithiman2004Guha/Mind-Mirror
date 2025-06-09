@@ -32,8 +32,8 @@ Don't include any other characters besides the JSON structure.
 
   try {
     const response = await client.chatCompletion({
-      provider: "together",
-      model: "deepseek-ai/DeepSeek-R1-0528",
+      provider: "nscale",
+      model: "Qwen/Qwen3-235B-A22B",
       messages: [
         {
           role: "user",

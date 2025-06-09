@@ -106,7 +106,7 @@ export default function Post() {
       }
     ]);
   };
-
+  console.log(post)
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <View style = {styles.container}>
@@ -126,8 +126,7 @@ export default function Post() {
                 <View style={styles.userInfo}>
                   <Image source={{ uri: post.user.profileImage }} style={styles.avatar} />
                   <View style={styles2.profileInfo}>
-                    <Text style={styles.username}>{post.user.username}</Text>
-                    <Text style={styles2.memberSince}>Member Since: {formatMemberSince(post.user.createdAt)}</Text>
+                    <Text style={styles.username}>{`${post.user.username} posted:`}</Text>
                   </View>
                 </View>
               </View>

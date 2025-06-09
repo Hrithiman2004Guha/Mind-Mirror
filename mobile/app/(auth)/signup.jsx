@@ -23,7 +23,7 @@ export default function Signup() {
   const [password, setPassword] = useState('');
   const [seePassword, setSeePassword] = useState(false);
   const {user, token, register, isLoading} = useAuthStore();
-  const handleSignup = async(email,username,password) => {
+  const handleSignup = async(username,email,password) => {
    const result = await register(username,email,password)
    if(!result.success)
     Alert.alert("Registration Failed:",result.error);

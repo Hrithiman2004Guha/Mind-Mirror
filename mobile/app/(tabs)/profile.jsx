@@ -83,7 +83,7 @@ export default function Profile() {
         style={styles.bookImage}
       />
       <View style={styles.bookInfo}>
-        <Text style={styles.bookTitle}>{item.title}</Text>
+        <Text style={styles.bookTitle}>{`${item.title} (${item.isPublic ? "Public" : "Private"})`}</Text>
         <Text style={styles.bookCaption} numberOfLines={2}>{item.content}</Text>
         <Text style={styles.bookDate}>Posted on {formatPublishDate(item.createdAt)}</Text>
       </View>

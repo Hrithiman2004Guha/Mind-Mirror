@@ -1,6 +1,6 @@
-# 🎵 Moodify – AI-Powered Mood Journal App
+# 🎵 Mind-Mirror – AI-Powered Mood Journal App
 
-Welcome to **Moodify**, an AI-powered journaling app that suggests songs, movies, books, and TV shows based on your mood. Built with **React Native** using **Expo**, and powered by **Hugging Face's NLP models**, this app helps you track your feelings while receiving emotionally intelligent media recommendations.
+Welcome to **Mind-Mirror**, an AI-powered journaling app that suggests songs, movies, books, and TV shows based on your mood. Built with **React Native** using **Expo**, and powered by **Hugging Face's NLP models**, this app helps you track your feelings while receiving emotionally intelligent media recommendations.
 
 ---
 
@@ -24,8 +24,8 @@ These steps will help you run the project locally on your machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/moodify.git
-cd moodify
+git clone https://github.com/your-username/Mind-Mirror.git
+cd Mind-Mirror
 ```
 
 ### 2. Install Dependencies
@@ -100,7 +100,7 @@ Expo will generate an APK and give you a download link once it's done.
 
 ---
 
-## 💡 Why Moodify?
+## 💡 Why Mind-Mirror?
 
 I built this in **one week** after learning JavaScript and React Native from scratch. Instead of cloning a tutorial, I learned the tools and built something original — because I believe in apps that respond to **how we feel**, not just what we do.
 
@@ -116,7 +116,7 @@ I built this in **one week** after learning JavaScript and React Native from scr
 
 ## 🙌 Contributing
 
-Want to improve Moodify? Fork the repo and make a pull request — ideas are welcome!
+Want to improve Mind-Mirror? Fork the repo and make a pull request — ideas are welcome!
 
 ---
 
@@ -130,9 +130,9 @@ LinkedIn: ([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/hri
 
 ## 🌟 Final Words
 
-Moodify isn't just a project — it's proof that ideas + execution > tutorials. It's your emotions, visualized — and maybe, healed a little.
+Mind-Mirror isn't just a project — it's proof that ideas + execution > tutorials. It's your emotions, visualized — and maybe, healed a little.
 
-Feel something? Moodify it. ✨
+Feel something? Mind-Mirror it. ✨
 
 ---
 

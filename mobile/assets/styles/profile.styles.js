@@ -15,6 +15,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: COLORS.background,
   },
+  postRow: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+},
   profileHeader: {
     flexDirection: "row",
     alignItems: "center",

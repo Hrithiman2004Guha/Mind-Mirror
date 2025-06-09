@@ -144,4 +144,27 @@ router.delete("/:id", protectRoute, async(req,res)=>{
     res.status(500).json({ message: "Internal server error" });
   }
 });
+router.patch('/:id', protectRoute, async (req, res) => {
+  try {
+    const postId = req.params.id;
+    const userId = req.user.id; // From decoded JWT
+    const { isPublic } = req.body;
+
+    // Ensure the post exists and belongs to the user
+    const post = await Post.findById(postId);
+    if (!post) return res.status(404).json({ message: "Post not found" });
+    if (post.user.toString() !== userId) return res.status(403).json({ message: "Not authorized" });
+
+    // Update field(s)
+    if (typeof isPublic === 'boolean') {
+      post.isPublic = isPublic;
+    }
+
+    await post.save();
+    res.json(post);
+  } catch (error) {
+    console.error("Update post error:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
 export default router;

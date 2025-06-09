@@ -7,6 +7,7 @@ import styles from '../../assets/styles/home.styles';
 import { Ionicons } from '@expo/vector-icons';
 import { formatPublishDate } from '../../lib/util'; // make sure you have this or use `new Date().toLocaleDateString()`
 import { Image } from 'expo-image';
+import { useNavigation } from 'expo-router';
 export default function Home() {
   const { token } = useAuthStore();
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function Home() {
   const [refreshing, setRefreshing] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const {user} = useAuthStore();
+  const navigation = useNavigation();
   const fetchPosts = async (pageNum = 1, refresh = false) => {
     try {
       if (refresh) setRefreshing(true);
@@ -61,33 +63,38 @@ export default function Home() {
       fetchPosts(1, true); // refresh on screen focus
     }, [])
   );
-
+  const handlePostTap = (post)=>{
+    navigation.navigate('post',{post});
+  }
   const renderPost = ({ item }) => {
-  console.log("🔍 Post item:", item); // ← This logs each post with user field populated
+ // ← This logs each post with user field populated
 
   return (
-    <View style={styles.bookCard}>
-      <View style={styles.bookHeader}>
-        <View style={styles.userInfo}>
-          <Image
-            source={{ uri: item.user?.profileImage }}
-            style={styles.avatar}
-          />
-          <Text style={styles.username}>{item.user?.username || 'Anonymous'}</Text>
-        </View>
-      </View>
-
-      <TouchableOpacity
+    
+      <View style={styles.bookCard}>
+        <TouchableOpacity
         style={styles.card}
-        onPress={() => router.push(`/post/${item._id}`)}
+        onPress={() => handlePostTap(item)}
       >
-        <Text style={styles.bookTitle}>{item.title}</Text>
-        <Text style={styles.bookDetails}>
-          {item.content.length > 50 ? item.content.slice(0, 50) + '...' : item.content}
-        </Text>
-        <Text style={styles.date}>{formatPublishDate(item.createdAt)}</Text>
+        <View style={styles.bookHeader}>
+          <View style={styles.userInfo}>
+            <Image
+              source={{ uri: item.user?.profileImage }}
+              style={styles.avatar}
+            />
+            <Text style={styles.username}>{item.user?.username || 'Anonymous'}</Text>
+          </View>
+        </View>
+
+        
+          <Text style={styles.bookTitle}>{item.title}</Text>
+          <Text style={styles.bookDetails}>
+            {item.content.length > 50 ? item.content.slice(0, 50) + '...' : item.content}
+          </Text>
+          <Text style={styles.date}>{formatPublishDate(item.createdAt)}</Text>
       </TouchableOpacity>
-    </View>
+      </View>
+    
   );
 };
 

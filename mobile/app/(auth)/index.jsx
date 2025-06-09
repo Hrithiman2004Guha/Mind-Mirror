@@ -67,7 +67,7 @@ export default function Login() {
               ]}
             >
               <Text style={[styles.title, { textAlign: 'center', marginBottom: 8 }]}>
-                Welcome to 𝑀𝒾𝓃𝒹-𝑀𝒾𝓇𝓇𝑜𝓇!
+                Welcome to M͎i͎n͎d͎-͎M͎i͎r͎r͎o͎r͎!
               </Text>
               <Text style={[styles.subtitle, { textAlign: 'center', marginBottom: 20 }]}>
                 😀 Please sign-in to continue!

@@ -1,50 +1,139 @@
-# Welcome to your Expo app 👋
+# 🎵 Moodify – AI-Powered Mood Journal App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to **Moodify**, an AI-powered journaling app that suggests songs, movies, books, and TV shows based on your mood. Built with **React Native** using **Expo**, and powered by **Hugging Face's NLP models**, this app helps you track your feelings while receiving emotionally intelligent media recommendations.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Features
 
-   ```bash
-   npm install
-   ```
+* 🔐 **Authentication**: Fully functional Login/Signup system (email + password)
+* ✍️ **Create Posts**: Add a title and content to your post
+* 🕵️‍♂️ **Post Privacy**: Choose between **public** or **private** posts
+* 🤖 **AI Suggestions**: Based on your writing, get personalized **songs, movies, books, and TV show** recommendations using Hugging Face
+* 💬 **Comments**: Comment on public posts (only the author of a comment can delete it)
+* 🔄 **Toggle Visibility**: Convert posts from public ↔ private anytime
+* 🧑‍💼 **Profile View**: Displays your posts, account creation date, and post metadata
+* 🎨 **Minimal UI**: Clean, content-first design
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Getting Started
 
-In the output, you'll find options to open the app in a
+These steps will help you run the project locally on your machine.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone the Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-username/moodify.git
+cd moodify
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install Dependencies
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Start the App with Expo
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo start
+```
 
-## Join the community
+You'll see a QR code in your terminal or browser. Open it with the **Expo Go app** on your mobile device (download from Play Store/App Store).
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📦 Optional: Building an APK
+
+To get a real APK file to install on Android phones:
+
+### 1. Install EAS CLI
+
+```bash
+npm install -g eas-cli
+```
+
+### 2. Login to Expo
+
+```bash
+eas login
+```
+
+### 3. Configure EAS Build
+
+```bash
+eas build:configure
+```
+
+### 4. Build APK
+
+```bash
+eas build --platform android --profile preview
+```
+
+Expo will generate an APK and give you a download link once it's done.
+
+> ✅ You can open this link on your phone and install the APK directly.
+
+---
+
+## 📁 Folder Structure (Key Parts)
+
+```
+📦 app
+ ┣ 📜 index.js             # Entry point
+ ┣ 📂 screens              # All screen components (Home, CreatePost, Profile, etc.)
+ ┣ 📂 components           # Reusable UI components
+ ┣ 📂 utils                # Helper functions (API calls, formatters, etc.)
+ ┣ 📂 assets               # Fonts, images, etc.
+```
+
+---
+
+## 🔌 Tech Stack
+
+* **React Native** w/ **Expo**
+* **Node.js + Express** (Backend - optional, if you're using a custom backend)
+* **Hugging Face Inference API** for AI suggestions
+* **MongoDB** or Firebase (for authentication & storage, depending on your setup)
+
+---
+
+## 💡 Why Moodify?
+
+I built this in **one week** after learning JavaScript and React Native from scratch. Instead of cloning a tutorial, I learned the tools and built something original — because I believe in apps that respond to **how we feel**, not just what we do.
+
+---
+
+## 📚 Resources
+
+* [Expo Docs](https://docs.expo.dev/)
+* [React Native Docs](https://reactnative.dev/docs/getting-started)
+* [Hugging Face Inference API](https://huggingface.co/inference-api)
+
+---
+
+## 🙌 Contributing
+
+Want to improve Moodify? Fork the repo and make a pull request — ideas are welcome!
+
+---
+
+## 📞 Contact
+
+Made by **Hrithiman Guha**
+For feedback or collaboration: \(hrithimanguha@gmail.com)]
+LinkedIn: ([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/hrithiman-guha-92746826a/))
+
+---
+
+## 🌟 Final Words
+
+Moodify isn't just a project — it's proof that ideas + execution > tutorials. It's your emotions, visualized — and maybe, healed a little.
+
+Feel something? Moodify it. ✨
+
+---
+
+> Built with ❤️ and JavaScript

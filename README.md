@@ -4,6 +4,8 @@ Welcome to **Mind-Mirror**, an AI-powered journaling app that suggests songs, mo
 
 ---
 
+## DEMO VIDEO: https://www.youtube.com/watch?v=rI0IbQQgYhs&t=13s
+
 ## 📱 Features
 
 * 🔐 **Authentication**: Fully functional Login/Signup system (email + password)

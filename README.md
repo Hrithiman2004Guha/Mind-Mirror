@@ -3,7 +3,7 @@
 Welcome to **Mind-Mirror**, an AI-powered journaling app that suggests songs, movies, books, and TV shows based on your mood. Built with **React Native** using **Expo**, and powered by **Hugging Face's NLP models**, this app helps you track your feelings while receiving emotionally intelligent media recommendations.
 
 ---
-##DEMO VIDEO:
+## DEMO VIDEO:
 [![Watch the video](https://img.youtube.com/vi/rI0IbQQgYhs/0.jpg)](https://www.youtube.com/watch?v=rI0IbQQgYhs&t=13s)
 
 

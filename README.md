@@ -46,7 +46,7 @@ npm install
 ### 3. Start the App with Expo
 
 ```bash
-cd/mobile
+cd mobile
 npx expo start
 ```
 

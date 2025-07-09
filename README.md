@@ -86,7 +86,7 @@ Want to improve Mind-Mirror? Fork the repo and make a pull request — ideas are
 
 Made by **Hrithiman Guha**
 For feedback or collaboration: \(hrithimanguha@gmail.com)]
-LinkedIn: (LinkedIn](https://www.linkedin.com/in/hrithiman-guha-92746826a/))
+[LinkedIn](https://www.linkedin.com/in/hrithiman-guha-92746826a/)
 
 ---
 

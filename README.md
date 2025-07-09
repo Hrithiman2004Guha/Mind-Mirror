@@ -97,9 +97,11 @@ Expo will generate an APK and give you a download link once it's done.
 ## 🔌 Tech Stack
 
 * **React Native** w/ **Expo**
-* **Node.js + Express** (Backend - optional, if you're using a custom backend)
+* **Node.js + Express** 
 * **Hugging Face Inference API** for AI suggestions
-* **MongoDB** or Firebase (for authentication & storage, depending on your setup)
+* **MongoDB**
+* **Zustand**
+* **AsyncStorage**
 
 ---
 

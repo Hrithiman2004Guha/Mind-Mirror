@@ -34,74 +34,29 @@ cd Mind-Mirror
 ### 2. Install Dependencies
 
 ```bash
+cd/backend
+npm install
+Then
+cd/mobile
 npm install
 ```
 
 ### 3. Start the App with Expo
 
 ```bash
+cd/mobile
 npx expo start
 ```
 
 You'll see a QR code in your terminal or browser. Open it with the **Expo Go app** on your mobile device (download from Play Store/App Store).
 
----
-
-## 📦 Optional: Building an APK
-
-To get a real APK file to install on Android phones:
-
-### 1. Install EAS CLI
-
-```bash
-npm install -g eas-cli
-```
-
-### 2. Login to Expo
-
-```bash
-eas login
-```
-
-### 3. Configure EAS Build
-
-```bash
-eas build:configure
-```
-
-### 4. Build APK
-
-```bash
-eas build --platform android --profile preview
-```
-
-Expo will generate an APK and give you a download link once it's done.
-
-> ✅ You can open this link on your phone and install the APK directly.
-
----
-
-## 📁 Folder Structure (Key Parts)
-
-```
-📦 app
- ┣ 📜 index.js             # Entry point
- ┣ 📂 screens              # All screen components (Home, CreatePost, Profile, etc.)
- ┣ 📂 components           # Reusable UI components
- ┣ 📂 utils                # Helper functions (API calls, formatters, etc.)
- ┣ 📂 assets               # Fonts, images, etc.
-```
-
----
 
 ## 🔌 Tech Stack
 
 * **React Native** w/ **Expo**
-* **Node.js + Express** 
+* **Node.js + Express** (Backend - optional, if you're using a custom backend)
 * **Hugging Face Inference API** for AI suggestions
-* **MongoDB**
-* **Zustand**
-* **AsyncStorage**
+* **MongoDB** or Firebase (for authentication & storage, depending on your setup)
 
 ---
 

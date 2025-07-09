@@ -34,10 +34,12 @@ cd Mind-Mirror
 ### 2. Install Dependencies
 
 ```bash
-cd/backend
+cd backend
 npm install
+```
 Then
-cd/mobile
+```bash
+cd mobile
 npm install
 ```
 
